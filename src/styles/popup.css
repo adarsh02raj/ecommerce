@@ -1,0 +1,60 @@
+.popup {
+    position: fixed;
+    top: 10vh;
+    right: 3vw;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.serach-box {
+    position: fixed;
+    top: 7vh;
+    right: 8vw;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@media screen and (max-width: 1286px) {
+    .serach-box {
+        position: fixed;
+        top: 7vh;
+        right: 10vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .serach-box {
+        position: fixed;
+        top: 7vh;
+        right: 11vw;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .serach-box {
+        position: fixed;
+        top: 7vh;
+        right: 13vw;
+    }
+} 
+@media screen and (max-width: 1000px) {
+    .serach-box {
+        position: fixed;
+        top: 7vh;
+        right: 15vw;
+    }
+} 
+@media screen and (max-width: 900px) {
+    .serach-box {
+        position: fixed;
+        top: 7vh;
+        right: 17vw;
+    }
+} 
