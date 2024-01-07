@@ -37,7 +37,7 @@ const PopUp = (props) => {
           <button onClick={handleClose}>❌</button>
         </div>
         <div className="center flex justify-start">
-          <div className="images">
+          <div className="images mr-2">
             <img
               src={checkoutItems[lenght].image}
               alt=""

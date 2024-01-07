@@ -42,7 +42,6 @@ const cartSlice = createSlice({
     },
     setUniqueProductCount(state, action) {
       state.uniqueProductCount = action.payload;
-      console.log('uni',state.uniqueProductCount);
     },
 
   },

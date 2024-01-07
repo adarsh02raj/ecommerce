@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeFromCart, setCartQuantity, setUniqueProductCount } from "../features/cartSlice";
+import {
+  removeFromCart,
+  setCartQuantity,
+  setUniqueProductCount,
+} from "../features/cartSlice";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
-  const qt = useSelector((state)=>state.cart.cartQuantity)
+  const qt = useSelector((state) => state.cart.cartQuantity);
   const [total, setToatal] = useState(0);
+
   // Calculate the unique product count
   const dispatch = useDispatch();
-  const uniqueProductCount = new Set(cartItems.map(item => item.id)).size;
-  console.log(uniqueProductCount);
+  const uniqueProductCount = new Set(cartItems.map((item) => item.id)).size;
 
   useEffect(() => {
-    dispatch(setCartQuantity(uniqueProductCount))
+    dispatch(setCartQuantity(uniqueProductCount));
     handleTotalPrice();
   }, [cartItems, uniqueProductCount]);
   useEffect(() => {
     dispatch(setUniqueProductCount(uniqueProductCount));
   }, [dispatch, uniqueProductCount, cartItems]);
-
 
   const handleTotalPrice = () => {
     let total = 0;
@@ -113,12 +116,8 @@ const Cart = () => {
           })}
         </div>
         <div className="flex justify-between w-[60%] mb-10">
-          <div>
-            Total
-          </div>
-          <div>
-            Rs. {total}
-          </div>
+          <div>Total</div>
+          <div>Rs. {total}</div>
         </div>
       </div>
     );

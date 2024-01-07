@@ -39,7 +39,7 @@ const Navbar = () => {
         {/* Left Nav */}
         <div className="flex items-center">
           <Link to={"/"}>
-            <h1 className="text-white text-lg font-bold">Brand Name</h1>
+            <h1 className="text-white text-lg font-bold">Ecommerce</h1>
           </Link>
         </div>
 
@@ -103,7 +103,7 @@ const Navbar = () => {
             <Link to={"/cart"}>
               Cart
               {uniqueProductCount > 0 && (
-                <span className="text-white font-semibold ml-2 relative -top-2 bg-yellow-800 rounded-full px-2">
+                <span className="text-white font-semibold ml-2 fixed top-1 bg-yellow-800 rounded-full px-2">
                   {uniqueProductCount}
                 </span>
               )}
