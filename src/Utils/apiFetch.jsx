@@ -15,7 +15,7 @@ export const getApi = async () => {
 export const getProductsForCollection = async (collectionId, limit, pageNumber, selectedValue, selectedFilters) => {
   try {
     const response = await axios.post(
-      `https://shopperassistant.anncode.com/admin/collection/products`,
+      `https://corsproxy.org/?https://shopperassistant.anncode.com/admin/collection/products`,
       {
         collectionId,
         page: pageNumber,
@@ -42,7 +42,7 @@ export const getProductsForCollection = async (collectionId, limit, pageNumber, 
 export const fetchDataForSearch = async (searchQuery, page, limit) => {
   try {
     const response = await axios.get(
-      `https://shopperassistant.anncode.com/admin/product?page=${page}&limit=${limit}&search=${searchQuery}`,
+      `https://corsproxy.org/?https://shopperassistant.anncode.com/admin/product?page=${page}&limit=${limit}&search=${searchQuery}`,
       {
         headers: {
           Accept: "application/json",
